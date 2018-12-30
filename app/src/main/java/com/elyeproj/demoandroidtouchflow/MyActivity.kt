@@ -19,16 +19,8 @@ class MyActivity : AppCompatActivity() {
     }
 
     private fun setupSwitch() {
-        activity_dispatch_touch.setOnCheckedChangeListener { _, isChecked ->
-            setController(Control.Key.ACTIVITY_DISPATCH_TOUCH, isChecked)
-        }
-
         activity_on_touch.setOnCheckedChangeListener { _, isChecked ->
             setController(Control.Key.ACTIVITY_ON_TOUCH, isChecked)
-        }
-
-        layout_dispatch_touch.setOnCheckedChangeListener { _, isChecked ->
-            setController(Control.Key.LAYOUT_DISPATCH_TOUCH, isChecked)
         }
 
         layout_intercept_touch.setOnCheckedChangeListener { _, isChecked ->
@@ -39,12 +31,12 @@ class MyActivity : AppCompatActivity() {
             setController(Control.Key.LAYOUT_ON_TOUCH, isChecked)
         }
 
-        view_dispatch_touch.setOnCheckedChangeListener { _, isChecked ->
-            setController(Control.Key.VIEW_DISPATCH_TOUCH, isChecked)
-        }
-
         view_on_touch.setOnCheckedChangeListener { _, isChecked ->
             setController(Control.Key.VIEW_ON_TOUCH, isChecked)
+        }
+
+        view_disallow_parent_intercept.setOnCheckedChangeListener { _, isChecked ->
+            setController(Control.Key.VIEW_DISALLOW_PARENT_INTERCEPT, isChecked)
         }
     }
 
@@ -57,8 +49,8 @@ class MyActivity : AppCompatActivity() {
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
         traceTouchStart(1, TAG, "dispatchTouchEvent", event)
-        super.dispatchTouchEvent(event)
-        traceTouchEnd(1, TAG, "dispatchTouchEvent", event, Control.activityDispatchTouch)
-        return Control.activityDispatchTouch
+        val defaultValue = super.dispatchTouchEvent(event)
+        traceTouchEnd(1, TAG, "dispatchTouchEvent", event, defaultValue)
+        return defaultValue
     }
 }

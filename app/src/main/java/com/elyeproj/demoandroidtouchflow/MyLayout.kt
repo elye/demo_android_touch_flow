@@ -16,9 +16,9 @@ class MyLayout @JvmOverloads constructor(
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
         traceTouchStart(3, TAG, "dispatchTouchEvent", event)
-        super.dispatchTouchEvent(event)
-        traceTouchEnd(3, TAG, "dispatchTouchEvent", event, Control.layoutDispatchTouch)
-        return Control.layoutDispatchTouch
+        val defaultValue = super.dispatchTouchEvent(event)
+        traceTouchEnd(3, TAG, "dispatchTouchEvent", event, defaultValue)
+        return defaultValue
     }
 
     override fun onInterceptTouchEvent(event: MotionEvent): Boolean {

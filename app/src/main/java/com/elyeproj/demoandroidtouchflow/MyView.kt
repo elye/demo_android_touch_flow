@@ -16,12 +16,15 @@ class MyView @JvmOverloads constructor(
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
         traceTouchStart(5, TAG, "dispatchTouchEvent", event)
-        super.dispatchTouchEvent(event)
-        traceTouchEnd(5, TAG, "dispatchTouchEvent", event, Control.viewDispatchTouch)
-        return Control.viewDispatchTouch
+        val defaultValue = super.dispatchTouchEvent(event)
+        traceTouchEnd(5, TAG, "dispatchTouchEvent", event, defaultValue)
+        return defaultValue
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
+        if (Control.viewDisallowParentIntercept) {
+            parent.requestDisallowInterceptTouchEvent(true)
+        }
         traceTouchStart(6, TAG, "onTouchEvent", event)
         super.onTouchEvent(event)
         traceTouchEnd(6, TAG, "onTouchEvent", event, Control.viewOnTouch)
