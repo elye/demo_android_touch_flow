@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.elyeproj.demoandroidtouchflow.MyLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/container_sub"
+        android:layout_gravity="center"
+        android:background="#f00"
+        android:layout_height="300dp"
+        android:layout_width="300dp">
+
+
+    <com.elyeproj.demoandroidtouchflow.MyView
+            android:layout_gravity="center"
+            android:background="#00f"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+
+</com.elyeproj.demoandroidtouchflow.MyLayout>

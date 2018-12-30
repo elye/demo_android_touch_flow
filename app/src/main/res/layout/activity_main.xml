@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+    <FrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/container"
+            android:layout_gravity="center"
+            android:layout_height="400dp"
+            android:layout_width="match_parent"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/activity_dispatch_touch"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="MyActivity dispatchTouchEvent"
+                android:saveEnabled="false"/>
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/activity_on_touch"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="MyActivity onTouchEvent"
+                android:saveEnabled="false"/>
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/layout_dispatch_touch"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="MyLayout dispatchTouchEvent"
+                android:saveEnabled="false"/>
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/layout_intercept_touch"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="MyLayout onInterceptTouchEvent"
+                android:saveEnabled="false"/>
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/layout_on_touch"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="MyLayout onTouchEvent"
+                android:saveEnabled="false"/>
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/view_dispatch_touch"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="MyView dispatchTouchEvent"
+                android:saveEnabled="false"/>
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/view_on_touch"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="MyView onTouchEvent"
+                android:saveEnabled="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>
