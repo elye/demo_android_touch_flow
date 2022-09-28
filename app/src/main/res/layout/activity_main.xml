@@ -17,31 +17,31 @@
             android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <android.support.v7.widget.SwitchCompat
+        <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/activity_on_touch"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="MyActivity onTouchEvent"
                 android:saveEnabled="false"/>
-        <android.support.v7.widget.SwitchCompat
+        <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/layout_intercept_touch"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="MyLayout onInterceptTouchEvent"
                 android:saveEnabled="false"/>
-        <android.support.v7.widget.SwitchCompat
+        <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/layout_on_touch"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="MyLayout onTouchEvent"
                 android:saveEnabled="false"/>
-        <android.support.v7.widget.SwitchCompat
+        <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/view_on_touch"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="MyView onTouchEvent"
                 android:saveEnabled="false"/>
-        <android.support.v7.widget.SwitchCompat
+        <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/view_disallow_parent_intercept"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
